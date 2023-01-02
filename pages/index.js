@@ -1,24 +1,27 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
+import Button from '@mui/material/Button';
+import { Box } from '@mui/system';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Butthole</a>
+        <h1 sxclassName={`${styles.title}`}>
+          Welcome to <Button className='customButton' href="https://nextjs.org" variant='contained'>Butthole</Button>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+        <p className={'button'}>
+          Get started by editing <code className={'homepage'}>pages/index.js</code>
         </p>
 
-        <div className={styles.grid}>
+        <Box sx={{backgroundColor:'green'}} className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -46,7 +49,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </Box>
       </main>
 
       <footer>
