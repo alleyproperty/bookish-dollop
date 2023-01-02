@@ -2,6 +2,9 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/system';
+import TextField from '@mui/material/TextField';
+import { Grid } from '@mui/material';
+
 
 export default function Home() {
   return (
@@ -21,7 +24,14 @@ export default function Home() {
           Get started by editing <code className={'homepage'}>pages/index.js</code>
         </p>
 
-        <Box sx={{backgroundColor:'green'}} className={styles.grid}>
+        <Grid container>
+          <Grid item xs={6}>
+            <TextField variant='filled' sx={{ width: "100%" }}></TextField>
+          </Grid>
+          <Grid item xs={6}></Grid>
+
+        </Grid>
+        <Box sx={{ backgroundColor: 'green' }} className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
